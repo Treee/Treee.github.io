@@ -1,12 +1,233 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/grids-responsive-min.css" />
+    <link rel="stylesheet" href="./layout/styles.css" />
+    <title>The Tree House</title>
+  </head>
 
-<head>
-    <title>Page Title</title>
-</head>
+  <body>
+    <div id="layout" class="pure-g">
+      <div class="sidebar pure-u-1 pure-u-md-1-4">
+        <div class="header">
+          <h1 class="brand-title">The Tree House</h1>
+          <h2 class="brand-tagline">Having Fun Solving Problems</h2>
 
-<body>
-    home page lol
-</body>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a class="pure-button" target="_blank" href="https://www.twitch.tv/itsatreee">Twitch</a>
+                <a class="pure-button" target="_blank" href="https://github.com/Treee">GitHub</a>
+                <a class="pure-button" target="_blank" href="https://steamcommunity.com/id/itsatreee/myworkshopfiles/">Steam</a>
+                <a class="pure-button" target="_blank" href="https://www.youtube.com/c/Treeee/videos">Youtube</a>
+                <a class="pure-button" target="_blank" href="https://the-survivalists.net/">Community</a>
+                <a class="pure-button" target="_blank" href="https://discord.gg/SfKUCU2emg">DayZ Modding</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
 
+      <div class="content pure-u-1 pure-u-md-3-4">
+        <div>
+          <!-- A wrapper for all the blog posts -->
+          <div class="posts">
+            <h1 class="content-subhead">Recent Posts</h1>
+
+            <!-- A single blog post -->
+            <section class="post">
+              <header class="post-header">
+                <img width="96" height="48" alt="Trees profile picture" class="post-avatar" src="./img/profilepic.png" />
+
+                <h2 class="post-title">FACE PAINTING!!</h2>
+
+                <p class="post-meta">
+                  <a class="post-category post-category-design" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2786677604" target="_blank">Steam</a>
+                  <a class="post-category post-category-pure" href="https://github.com/Treee/ItsATreeeDayZWorkshopMods/tree/master/Survivalists_FacePaints" target="_blank">Github</a>
+                </p>
+              </header>
+              <div class="post-description">
+                <p>
+                  A commonly requested DayZ feature is camo face paint for blending into the backround environment. Prior to my workshop mod the only server to showcase this awesome feature was
+                  <a class="post-author" href="https://www.dayzunderground.com/news/dug-mod-update-13-overview/#attachment_7844" target="_blank">DayZ Underground</a> which provided the inspiration to bring face paints to
+                  the masses.<br />
+                </p>
+                <div class="pure-g">
+                  <div class="pure-u-1-3"></div>
+                  <div class="pure-u-1-3">
+                    <p>
+                      <a class="center-image-link" href="https://www.dayzunderground.com/news/dug-mod-update-13-overview/#attachment_7844" target="_blank">
+                        <img width="360" height="240" alt="Photo of someone with camo face paint" class="pure-img-responsive" src="https://www.dayzunderground.com/wp-content/uploads/2020/05/peaksurvivor.jpg" />
+                      </a>
+                    </p>
+                  </div>
+                  <div class="pure-u-1-3"></div>
+                </div>
+                <p>
+                  A quick rundown of the work. Each player model has a texture that represents what is wrapped around the model and with over 31 individual player models, retexturing for each camo pattern turns into a
+                  massive amount of 4k images; male models have 4 textures each to account for beard lifespans which we will touch on later. I wanted to add over 25 face paint patterns so keeping the total size of the
+                  mod down was important. In DayZ's engine, Enfusion, the RVMAT or material file contains the processing steps during rendering. Fortunately for us, the third stage, MC or
+                  <a class="post-author" href="https://community.bistudio.com/wiki/Super_shader#3._Macro_map" target="_blank">Macro Map</a> gives us the option to overlay additional texture data onto the basic texture.
+                  This forms the foundation of me using a single MC file for each camo pattern for all character models thus allowing me to only have to write custom RVMAT files, which are considerably smaller instead of
+                  4k textures. This reduces the modpack by 90%; from roughly 300MB+ to 30MB+.
+                </p>
+                <div class="post-description">
+                  <div class="post-images pure-g">
+                    <div class="pure-u-1 pure-u-md-1-3">
+                      <img alt="camo pattern image mask" class="pure-img-responsive" src="./img/fp_bulgaria1_beard_mc.png" />
+                      <div class="post-image-meta">
+                        <h3>Pattern Mask</h3>
+                      </div>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3">
+                      <img alt="base player model template with beard" class="pure-img-responsive" src="./img/fp_a_shaved_mc.png" />
+                      <div class="post-image-meta">
+                        <h3>Bearded Player Template</h3>
+                      </div>
+                    </div>
+                    <div class="pure-u-1 pure-u-md-1-3" style="padding-left: 1em">
+                      <img width="160" alt="extravagant clown pattern" class="pure-img-responsive" src="https://cdn.discordapp.com/attachments/579650103858692116/992949761319649430/unknown.png" />
+                      <br />
+                      <div class="post-image-meta">
+                        <h3>Fun Tests</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pure-g">
+                  <div class="pure-u-1-3"></div>
+                  <div class="pure-u-1-3">
+                    <p>
+                      <a class="center-image-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2786677604" target="_blank">
+                        <img alt="material file example" class="pure-img-responsive" src="./img/faces.png" />
+                      </a>
+                    </p>
+                  </div>
+                  <div class="pure-u-1-3"></div>
+                </div>
+                <p>
+                  There is a hidden gotcha within DayZ for modders that wish to modify player model textures, beards. The lifespan for a beard is check on a network sync which looks at how long the player has gone
+                  without shaving and will reset the current face texture regardless of state. For female models there are no beards and they do not even have calls to this system at runtime so their solution has to come
+                  separately. Ultimately, I overrode the player Lifespan to check for the existence of any camo patterns applied, if so, apply the custom
+                  <a class="post-author" href="https://github.com/Treee/ItsATreeeDayZWorkshopMods/blob/master/Survivalists_FacePaints/heads/fp_bulgaria1/hhl_f_helga_body.rvmat" target="_blank">RVMAT</a> I created. If the
+                  model is female, the face texture is simply overriden. The item that applies the face paint is an existing epinephrine pen repurposed to scroll through pattern options then click and hold to apply. Rags
+                  were also given actions to wash a players face to remove the paint which sets the current camo pattern to -1 and indicates no pattern applied so the default DayZ systems reset the face material.
+                </p>
+              </div>
+            </section>
+          </div>
+
+          <div class="posts">
+            <h1 class="content-subhead">Cool Things</h1>
+
+            <section class="post">
+              <header class="post-header">
+                <img width="96" height="48" alt="Trees profile picture" class="post-avatar" src="./img/profilepic.png" />
+
+                <h2 class="post-title">The Survivalists Community</h2>
+
+                <p class="post-meta">
+                  <a class="post-category post-category-js" href="https://the-survivalists.net/">Community</a>
+                  <a class="post-category post-category-js" href="https://www.youtube.com/watch?v=WOmb11owGG0">Youtube</a>
+                </p>
+              </header>
+              <div class="post-description">
+                <p>
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube-nocookie.com/embed/WOmb11owGG0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    style="display: block; margin: 0 auto"
+                  ></iframe>
+                  <br />
+                  For over two years my free time development efforts have helped support The Survivalists community to grow it into the #1 Roleplay server within DayZ at the time of this writing (Summer 2022). Building
+                  content and balancing the game to meet the needs of the community presents an awesome challenge of balance. Players have an insatiable appetite for content and progression whereas my time and velocity
+                  of release are finite. Prioritizing work that yields more "Fun" is important when managing a content release cycle for a large community. Our server runs on a bi-weekly update schedule with major
+                  releases happening on the first and third weeks and minor releases on second and fourth weeks. This allows us to be agile with feedback from the community and helps build an expected cadence for content
+                  or bug fixes. One awesome byproduct of making cool stuff with mods is other people want to learn how to make cool stuff as well. Within the community discord we have a a channel dedicated to helping
+                  others learn how to take their first steps on the modding journey which has yielded several new server devlopers who contribute their content to the server modpack.
+                </p>
+              </div>
+            </section>
+
+            <section class="post">
+              <header class="post-header">
+                <img width="96" height="48" alt="Trees profile picture" class="post-avatar" src="./img/profilepic.png" />
+
+                <h2 class="post-title">The DayZ Modding Community</h2>
+
+                <p class="post-meta">
+                  <a class="post-category post-category-js" href="https://discord.gg/SfKUCU2emg">Community</a>
+                </p>
+              </header>
+              <div class="post-description">
+                <div class="pure-g">
+                  <div class="pure-u-1-3"></div>
+                  <div class="pure-u-1-3">
+                    <p>
+                      <img width="360" height="240" alt="dayz steam workshop" class="pure-img-responsive" src="./img/dayzworkshop.png" />
+                    </p>
+                  </div>
+                  <div class="pure-u-1-3"></div>
+                </div>
+                <p>
+                  <a class="post-author" href="https://steamcommunity.com/id/itsatreee/myworkshopfiles/?appid=221100" target="_blank">My Steam Workshop Content</a>
+                </p>
+              </div>
+            </section>
+
+            <section class="post">
+              <header class="post-header">
+                <img width="96" height="48" alt="Trees profile picture" class="post-avatar" src="./img/profilepic.png" />
+
+                <h2 class="post-title">Fun Hobbies And Content</h2>
+
+                <p class="post-meta"><a class="post-category" href="https://www.twitch.tv/itsatreee">Twitch</a> <a class="post-category post-category-js" href="https://www.youtube.com/c/Treeee/videos">Youtube</a></p>
+              </header>
+
+              <div class="post-description">
+                <div class="post-images pure-g">
+                  <div class="pure-u-1 pure-u-md-1-2">
+                    <a href="https://www.twitch.tv/itsatreee">
+                      <img alt="ItsATreee Twitch Channel" class="pure-img-responsive" src="./img/twitch-banner.png" />
+                    </a>
+
+                    <div class="post-image-meta">
+                      <h3>ItsATreee Twitch</h3>
+                    </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-2">
+                    <a href="https://www.youtube.com/c/Treeee/videos">
+                      <img alt="Tree's Youtube Channel Videos" class="pure-img-responsive" src="./img/twitch-banner.png" style="transform: scaleX(-1)" />
+                    </a>
+
+                    <div class="post-image-meta" style="position: relative">
+                      <h3>Treee Youtube</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div class="footer">
+            <div class="pure-menu pure-menu-horizontal">
+              <ul>
+                <!-- <li class="pure-menu-item"><a href="" class="pure-menu-link">About</a></li> -->
+                <li class="pure-menu-item"><a href="https://github.com/Treee" class="pure-menu-link">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
