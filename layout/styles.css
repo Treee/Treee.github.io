@@ -138,11 +138,17 @@ p .center-image-link {
   background: #df2d4f;
 }
 
+.post-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .post-images {
   margin: 1em 0;
 }
 .post-image-meta {
-  margin-top: -1.5em;
+  margin-top: -0.5em;
   color: blanchedalmond;
   text-shadow: 2px 2px 2px #333;
   text-align: center;
@@ -166,7 +172,7 @@ p .center-image-link {
 @media (min-width: 48em) {
   .content {
     padding: 2em 3em 0;
-    margin-left: 25%;
+    margin-left: 20%;
   }
 
   .header {
