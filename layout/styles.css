@@ -81,7 +81,7 @@ p .center-image-link {
 
 .content-subhead {
   text-transform: uppercase;
-  color: #aaa;
+  color: black;
   border-bottom: 1px solid #eee;
   padding: 0.4em 0;
   font-size: 80%;
@@ -91,6 +91,7 @@ p .center-image-link {
 
 .content {
   padding: 2em 1em 0;
+  background: darkgray;
 }
 
 .post {
@@ -141,10 +142,10 @@ p .center-image-link {
   margin: 1em 0;
 }
 .post-image-meta {
-  margin-top: -3.5em;
-  margin-left: 1em;
-  color: #fff;
-  text-shadow: 0 1px 1px #333;
+  margin-top: -1.5em;
+  color: blanchedalmond;
+  text-shadow: 2px 2px 2px #333;
+  text-align: center;
 }
 
 .footer {

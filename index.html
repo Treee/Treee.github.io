@@ -35,87 +35,228 @@
         <div>
           <!-- A wrapper for all the blog posts -->
           <div class="posts">
-            <h1 class="content-subhead">Recent Posts</h1>
+            <h1 class="content-subhead">Fun Things</h1>
 
             <!-- A single blog post -->
             <section class="post">
               <header class="post-header">
                 <img width="96" height="48" alt="Trees profile picture" class="post-avatar" src="./img/profilepic.png" />
 
-                <h2 class="post-title">FACE PAINTING!!</h2>
+                <h2 class="post-title">Game Design And Modding</h2>
 
                 <p class="post-meta">
-                  <a class="post-category post-category-design" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2786677604" target="_blank">Steam</a>
-                  <a class="post-category post-category-pure" href="https://github.com/Treee/ItsATreeeDayZWorkshopMods/tree/master/Survivalists_FacePaints" target="_blank">Github</a>
+                  <a class="post-category post-category-design" href="#">Blender</a>
+                  <a class="post-category post-category-design" href="#">DayZ</a>
+                  <a class="post-category post-category-design" href="#">Enfusion</a>
+                  <a class="post-category post-category-design" href="#">Object Builder</a>
                 </p>
               </header>
+
               <div class="post-description">
-                <p>
-                  A commonly requested DayZ feature is camo face paint for blending into the backround environment. Prior to my workshop mod the only server to showcase this awesome feature was
-                  <a class="post-author" href="https://www.dayzunderground.com/news/dug-mod-update-13-overview/#attachment_7844" target="_blank">DayZ Underground</a> which provided the inspiration to bring face paints to
-                  the masses.<br />
-                </p>
-                <div class="pure-g">
-                  <div class="pure-u-1-3"></div>
-                  <div class="pure-u-1-3">
-                    <p>
-                      <a class="center-image-link" href="https://www.dayzunderground.com/news/dug-mod-update-13-overview/#attachment_7844" target="_blank">
-                        <img width="360" height="240" alt="Photo of someone with camo face paint" class="pure-img-responsive" src="https://www.dayzunderground.com/wp-content/uploads/2020/05/peaksurvivor.jpg" />
-                      </a>
-                    </p>
+                <div class="post-images pure-g">
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <a href="#">
+                      <img alt="Import 3d Models" class="pure-img-responsive" src="./img/model-import.png" />
+                    </a>
+
+                    <div class="post-image-meta">
+                      <h3>Importing 3D Models</h3>
+                    </div>
                   </div>
-                  <div class="pure-u-1-3"></div>
-                </div>
-                <p>
-                  A quick rundown of the work. Each player model has a texture that represents what is wrapped around the model and with over 31 individual player models, retexturing for each camo pattern turns into a
-                  massive amount of 4k images; male models have 4 textures each to account for beard lifespans which we will touch on later. I wanted to add over 25 face paint patterns so keeping the total size of the
-                  mod down was important. In DayZ's engine, Enfusion, the RVMAT or material file contains the processing steps during rendering. Fortunately for us, the third stage, MC or
-                  <a class="post-author" href="https://community.bistudio.com/wiki/Super_shader#3._Macro_map" target="_blank">Macro Map</a> gives us the option to overlay additional texture data onto the basic texture.
-                  This forms the foundation of me using a single MC file for each camo pattern for all character models thus allowing me to only have to write custom RVMAT files, which are considerably smaller instead of
-                  4k textures. This reduces the modpack by 90%; from roughly 300MB+ to 30MB+.
-                </p>
-                <div class="post-description">
-                  <div class="post-images pure-g">
-                    <div class="pure-u-1 pure-u-md-1-3">
-                      <img alt="camo pattern image mask" class="pure-img-responsive" src="./img/fp_bulgaria1_beard_mc.png" />
-                      <div class="post-image-meta">
-                        <h3>Pattern Mask</h3>
-                      </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <a target="_blank" href="https://github.com/Treee/webgl2-engine/blob/master/src/renderer/camera/camera.ts">
+                      <img width="363" alt="3D Math" class="pure-img-responsive" src="./img/3d-math.png" />
+                    </a>
+
+                    <div class="post-image-meta">
+                      <h3>3D Math</h3>
                     </div>
-                    <div class="pure-u-1 pure-u-md-1-3">
-                      <img alt="base player model template with beard" class="pure-img-responsive" src="./img/fp_a_shaved_mc.png" />
-                      <div class="post-image-meta">
-                        <h3>Bearded Player Template</h3>
-                      </div>
-                    </div>
-                    <div class="pure-u-1 pure-u-md-1-3" style="padding-left: 1em">
-                      <img width="160" alt="extravagant clown pattern" class="pure-img-responsive" src="https://cdn.discordapp.com/attachments/579650103858692116/992949761319649430/unknown.png" />
-                      <br />
-                      <div class="post-image-meta">
-                        <h3>Fun Tests</h3>
-                      </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube-nocookie.com/embed/WOmb11owGG0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                      style="display: block; margin: 0 auto"
+                    ></iframe>
+
+                    <div class="post-image-meta" style="position: relative">
+                      <h3>Community Management</h3>
                     </div>
                   </div>
                 </div>
-                <div class="pure-g">
-                  <div class="pure-u-1-3"></div>
-                  <div class="pure-u-1-3">
-                    <p>
-                      <a class="center-image-link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2786677604" target="_blank">
-                        <img alt="material file example" class="pure-img-responsive" src="./img/faces.png" />
-                      </a>
-                    </p>
+              </div>
+              <div class="post-description">
+                <div class="post-images pure-g">
+                  <div class="pure-u-1 pure-u-md-1-1">
+                    <a href="#">
+                      <img alt="Create and extend systems" class="pure-img-responsive" src="./img/tools.png" />
+                    </a>
+
+                    <div class="post-image-meta">
+                      <h3>Create And Extend Systems</h3>
+                    </div>
                   </div>
-                  <div class="pure-u-1-3"></div>
                 </div>
-                <p>
-                  There is a hidden gotcha within DayZ for modders that wish to modify player model textures, beards. The lifespan for a beard is check on a network sync which looks at how long the player has gone
-                  without shaving and will reset the current face texture regardless of state. For female models there are no beards and they do not even have calls to this system at runtime so their solution has to come
-                  separately. Ultimately, I overrode the player Lifespan to check for the existence of any camo patterns applied, if so, apply the custom
-                  <a class="post-author" href="https://github.com/Treee/ItsATreeeDayZWorkshopMods/blob/master/Survivalists_FacePaints/heads/fp_bulgaria1/hhl_f_helga_body.rvmat" target="_blank">RVMAT</a> I created. If the
-                  model is female, the face texture is simply overriden. The item that applies the face paint is an existing epinephrine pen repurposed to scroll through pattern options then click and hold to apply. Rags
-                  were also given actions to wash a players face to remove the paint which sets the current camo pattern to -1 and indicates no pattern applied so the default DayZ systems reset the face material.
-                </p>
+              </div>
+              <div class="post-description">
+                <div class="post-images pure-g">
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube-nocookie.com/embed/mhXdJ_y_Cps"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>Multiple Animations And Functional Result Calculations</h3>
+                    </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube-nocookie.com/embed/CMEz-cQB92Q"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>Modular Vests</h3>
+                    </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube.com/embed/7wxwwxe53Gs"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>In Game Discord Channel Radio Jammer With Animations</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-description">
+                <div class="post-images pure-g">
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube.com/embed/y4KKGechLps"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>Key Card Doors And Event Triggers</h3>
+                    </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube.com/embed/dgd4R0aqU5c"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>Multiple Post Processing Effects Using Blending And Interpolation</h3>
+                    </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube-nocookie.com/embed/mbEaN7fY90w"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>Surface Ray Tracing And Event Triggers</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-description">
+                <div class="post-images pure-g">
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube-nocookie.com/embed/QHkfu5Y1Ls0"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta" style="position: relative">
+                      <h3>Face Paint</h3>
+                    </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube-nocookie.com/embed/98ddjeWTTis"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>Volume Control Through Events</h3>
+                    </div>
+                  </div>
+
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <iframe
+                      width="360"
+                      height="280"
+                      src="https://www.youtube-nocookie.com/embed/EfEpr61pR1Y"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+
+                    <div class="post-image-meta">
+                      <h3>Custom Emote Wheel</h3>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
           </div>
@@ -123,7 +264,7 @@
           <div class="posts">
             <h1 class="content-subhead">Cool Things</h1>
 
-            <section class="post">
+            <!-- <section class="post">
               <header class="post-header">
                 <img width="96" height="48" alt="Trees profile picture" class="post-avatar" src="./img/profilepic.png" />
 
@@ -181,36 +322,45 @@
                   <a class="post-author" href="https://steamcommunity.com/id/itsatreee/myworkshopfiles/?appid=221100" target="_blank">My Steam Workshop Content</a>
                 </p>
               </div>
-            </section>
+            </section> -->
 
             <section class="post">
               <header class="post-header">
                 <img width="96" height="48" alt="Trees profile picture" class="post-avatar" src="./img/profilepic.png" />
 
-                <h2 class="post-title">Fun Hobbies And Content</h2>
+                <h2 class="post-title">Programming Projects</h2>
 
                 <p class="post-meta"><a class="post-category" href="https://www.twitch.tv/itsatreee">Twitch</a> <a class="post-category post-category-js" href="https://www.youtube.com/c/Treeee/videos">Youtube</a></p>
               </header>
 
               <div class="post-description">
                 <div class="post-images pure-g">
-                  <div class="pure-u-1 pure-u-md-1-2">
-                    <a href="https://www.twitch.tv/itsatreee">
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <a href="https://github.com/night/betterttv/pull/3730">
                       <img alt="ItsATreee Twitch Channel" class="pure-img-responsive" src="./img/twitch-banner.png" />
                     </a>
 
                     <div class="post-image-meta">
-                      <h3>ItsATreee Twitch</h3>
+                      <h3>Open Source Contribution</h3>
                     </div>
                   </div>
 
-                  <div class="pure-u-1 pure-u-md-1-2">
-                    <a href="https://www.youtube.com/c/Treeee/videos">
-                      <img alt="Tree's Youtube Channel Videos" class="pure-img-responsive" src="./img/twitch-banner.png" style="transform: scaleX(-1)" />
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <a href="https://github.com/Treee/tech-widget-overlay">
+                      <img alt="Tree's Youtube Channel Videos" class="pure-img-responsive" src="./img/twitch-banner.png" />
                     </a>
 
-                    <div class="post-image-meta" style="position: relative">
-                      <h3>Treee Youtube</h3>
+                    <div class="post-image-meta">
+                      <h3>Age of Empires 2 Technology Overlay</h3>
+                    </div>
+                  </div>
+                  <div class="pure-u-1 pure-u-md-1-3">
+                    <a href="https://treee.github.io/cryptography-sandbox/">
+                      <img alt="Tree's Youtube Channel Videos" class="pure-img-responsive" src="./img/twitch-banner.png" />
+                    </a>
+
+                    <div class="post-image-meta">
+                      <h3>Cryptography</h3>
                     </div>
                   </div>
                 </div>
