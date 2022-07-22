@@ -151,9 +151,10 @@ p .center-image-link {
 }
 .post-image-meta {
   margin-top: -0.5em;
-  color: blanchedalmond;
-  text-shadow: 2px 2px 2px #333;
+  color: black;
+  text-shadow: 2px 2px 2px cornsilk;
   text-align: center;
+  font-weight: 1000;
 }
 
 .footer {
